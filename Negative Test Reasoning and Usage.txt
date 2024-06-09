@@ -1,0 +1,31 @@
+NEGATIVE TEST REASONING AND USAGE:
+----------------------------------
+Compute the path using Dijkstra algorithm and then update FIB of those routers that constitute the path, to set the destination value to r2. Hence the destination entry is set to r2.
+    
+So to perform negative testing, select any router apart from destination router r2 for sending a packet from r1.
+Starting from r1, the destination field of r1 FIB will not contain any router apart from destination router r2, that is the condition {if dest in self.lib} evaluates to False. Hence the packet will be dropped.
+    
+You can:
+
+	Basically pick a router not along the path from r1 to reach r2. 
+
+	Or specify a router that is not present in the topology.
+
+I have designed the case such that when you run the program you need to provide a third router. This router is used for negative testing and is a router that is basically not present in the topology or you can also provide a third router that is not along the path returned by Djikstra Algorithm. In simple words, any router apart from router r2.
+
+Example:
+--------
+a) python dijkstra.py net.json R01 R02 R23
+
+R23 is not an available destination entry in the FIB of r1. Hence packet that is addressed to router R23, will be dropped. 
+
+If we find the path between R01 and R02, the path is obtained as R01--->R07--->R018---->R02.
+
+So each router along this path is updated to have destination field set to R02 along with the respective next_hop and cost to reach the the destination.
+
+b) Now, if we run the program again with the following values:
+
+						python dijkstra.py net.json R01 R02 R11
+
+Since the destination R11 is not present in the FIB of R01, the packet addressed to R11 is dropped.
+
