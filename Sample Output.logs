@@ -1,0 +1,58 @@
+2024-03-12 15:13:57,244 - INFO -Obtaining the names of the two routers.
+2024-03-12 15:13:57,244 - INFO -Shortest path found between R17 and R02.
+2024-03-12 15:13:57,244 - INFO -Shortest path between R17 and R02 is ['R17', 'R16', 'R05', 'R07', 'R18', 'R02'].
+2024-03-12 15:13:57,244 - INFO -Updating FIB entry for R17 as (R02, R16, 38).
+2024-03-12 15:13:57,244 - INFO -Updated FIB for R17.
+2024-03-12 15:13:57,244 - INFO -Updating FIB entry for R16 as (R02, R05, 28).
+2024-03-12 15:13:57,244 - INFO -Updated FIB for R16.
+2024-03-12 15:13:57,244 - INFO -Updating FIB entry for R05 as (R02, R07, 26).
+2024-03-12 15:13:57,244 - INFO -Updated FIB for R05.
+2024-03-12 15:13:57,253 - INFO -Updating FIB entry for R07 as (R02, R18, 22).
+2024-03-12 15:13:57,255 - INFO -Updated FIB for R07.
+2024-03-12 15:13:57,255 - INFO -Updating FIB entry for R18 as (R02, R02, 20).
+2024-03-12 15:13:57,255 - INFO -Updated FIB for R18.
+2024-03-12 15:13:57,255 - INFO -POSITIVE CASE:
+2024-03-12 15:13:57,255 - INFO ---------------
+2024-03-12 15:13:57,255 - INFO -R17 forwarding data packet to R16.
+2024-03-12 15:13:57,255 - INFO -Router R16 received packet from R17.
+2024-03-12 15:13:57,255 - INFO -R16 forwarding data packet to R05.
+2024-03-12 15:13:57,255 - INFO -Router R05 received packet from R16.
+2024-03-12 15:13:57,255 - INFO -R05 forwarding data packet to R07.
+2024-03-12 15:13:57,255 - INFO -Router R07 received packet from R05.
+2024-03-12 15:13:57,255 - INFO -R07 forwarding data packet to R18.
+2024-03-12 15:13:57,255 - INFO -Router R18 received packet from R07.
+2024-03-12 15:13:57,255 - INFO -R18 forwarding data packet to R02.
+2024-03-12 15:13:57,255 - INFO -Destination reached as router R02 accepted data packet from R18. Data received is as follows: -->[Test data from R17 to R02].
+2024-03-12 15:13:57,255 - INFO -Calling discardPkt() to discard the packet as destination has been reached.
+2024-03-12 15:13:57,255 - INFO -Packet has reached destination R02. Discarding data packet.
+2024-03-12 15:13:57,255 - INFO -Packet discarded.
+2024-03-12 15:13:57,255 - INFO -NEGATIVE CASE:
+2024-03-12 15:13:57,255 - INFO ---------------
+2024-03-12 15:13:57,255 - INFO -No entry for R23 in FIB of R17.
+2024-03-12 15:13:57,255 - INFO -Router R17 dropped packet to be reached to R23.
+2024-03-12 15:13:57,255 - INFO -----------------------------------------------------------------------------------------------------
+2024-03-12 15:14:01,434 - INFO -Obtaining the names of the two routers.
+2024-03-12 15:14:01,434 - INFO -Shortest path found between R01 and R02.
+2024-03-12 15:14:01,434 - INFO -Shortest path between R01 and R02 is ['R01', 'R07', 'R18', 'R02'].
+2024-03-12 15:14:01,434 - INFO -Updating FIB entry for R01 as (R02, R07, 24).
+2024-03-12 15:14:01,434 - INFO -Updated FIB for R01.
+2024-03-12 15:14:01,434 - INFO -Updating FIB entry for R07 as (R02, R18, 22).
+2024-03-12 15:14:01,434 - INFO -Updated FIB for R07.
+2024-03-12 15:14:01,434 - INFO -Updating FIB entry for R18 as (R02, R02, 20).
+2024-03-12 15:14:01,434 - INFO -Updated FIB for R18.
+2024-03-12 15:14:01,434 - INFO -POSITIVE CASE:
+2024-03-12 15:14:01,434 - INFO ---------------
+2024-03-12 15:14:01,434 - INFO -R01 forwarding data packet to R07.
+2024-03-12 15:14:01,434 - INFO -Router R07 received packet from R01.
+2024-03-12 15:14:01,434 - INFO -R07 forwarding data packet to R18.
+2024-03-12 15:14:01,434 - INFO -Router R18 received packet from R07.
+2024-03-12 15:14:01,434 - INFO -R18 forwarding data packet to R02.
+2024-03-12 15:14:01,434 - INFO -Destination reached as router R02 accepted data packet from R18. Data received is as follows: -->[Test data from R01 to R02].
+2024-03-12 15:14:01,434 - INFO -Calling discardPkt() to discard the packet as destination has been reached.
+2024-03-12 15:14:01,434 - INFO -Packet has reached destination R02. Discarding data packet.
+2024-03-12 15:14:01,434 - INFO -Packet discarded.
+2024-03-12 15:14:01,434 - INFO -NEGATIVE CASE:
+2024-03-12 15:14:01,434 - INFO ---------------
+2024-03-12 15:14:01,434 - INFO -No entry for R11 in FIB of R01.
+2024-03-12 15:14:01,434 - INFO -Router R01 dropped packet to be reached to R11.
+2024-03-12 15:14:01,434 - INFO -----------------------------------------------------------------------------------------------------
